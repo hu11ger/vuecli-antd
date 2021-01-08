@@ -3,10 +3,10 @@
 </template>
 
 <script>
-import {messageMixin} from "../common/mixin.js"
+import { messageMixin } from "../common/mixin.js";
 
 export default {
-  mixins:[messageMixin],
+  mixins: [messageMixin],
   methods: {
     h2click() {
       console.log(this.$route);
@@ -14,9 +14,9 @@ export default {
       // this.$message.success("登录成功", 1, () => {
       //   this.$router.push("/layout");
       // });
-      this.$ms('登陆成功',()=>{
-        this.$router.push("/layout")
-      })
+      this.$ms("登陆成功", () => {
+        this.$router.push("/");
+      });
     },
   },
 };

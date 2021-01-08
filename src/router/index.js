@@ -4,9 +4,9 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 const Login = () => import("views/Login.vue");
 const Layout = () => import("views/Layout.vue");
-const Home = () => import("views/Home.vue");
-const Userlist = () => import("views/User/UserList.vue");
-const Workorder = () => import("views/Work/WorkOrder.vue");
+const Home = () => import("views/home/Home.vue");
+const Userlist = () => import("views/user/UserList.vue");
+const Workorder = () => import("views/work/WorkOrder.vue");
 
 const routes = [
   {
