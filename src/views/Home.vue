@@ -1,18 +1,27 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <h2>首页</h2>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import { getHomeMultidata } from "network/home.js";
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  name: "Home",
+  data() {
+    return {
+      banner: {},
+      recommend: {},
+    };
+  },
+  created() {
+    getHomeMultidata().then((res) => {
+      console.log(res);
+      this.banner = res.banner.list;
+      this.recommend = res.recommend.list;
+    });
+  },
+};
 </script>
+
+<style>
+</style>
